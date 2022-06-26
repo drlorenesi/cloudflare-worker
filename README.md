@@ -2,17 +2,19 @@
 
 ## Quickstart
 
-To create Cloudflare Workers you must have [wrangler](https://www.npmjs.com/package/wrangler) installed locally on your machine.
+To create Cloudflare Workers you can install [wrangler](https://www.npmjs.com/package/wrangler) locally on your machine:
 
 ```bash
 npm install -g wrangler
 ```
 
-Once installed, you can log in to your Cloudflare account and then check your credentials:
+or run the `wrangler` commands direclty using `npx`.
+
+Next, log in to your Cloudflare account and then check your credentials:
 
 ```bash
-wrangler login
-wrangler whoami
+npx wrangler login
+npx wrangler whoami
 ```
 
 You can create a new project, develop and deploy using:
@@ -54,13 +56,13 @@ addEventListener('fetch', (event) => {
 Or create an async function to hadle the incoming request:
 
 ```javascript
-addEventListener('fetch', (event) => {
-  event.respondWith(handleRequest(event.request));
-});
-
 async function handleRequest(request) {
   return new Response('Hello world');
 }
+
+addEventListener('fetch', (event) => {
+  event.respondWith(handleRequest(event.request));
+});
 ```
 
 ### ​​Syntax: Module Worker
