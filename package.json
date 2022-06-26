@@ -1,0 +1,19 @@
+{
+  "name": "cloudflare-worker",
+  "version": "0.1.0",
+  "devDependencies": {
+    "wrangler": "2.0.15"
+  },
+  "private": true,
+  "scripts": {
+    "start": "wrangler dev",
+    "deploy": "wrangler publish"
+  },
+  "keywords": [],
+  "author": "Diego Lorenesi <drlorenesi@gmail.com> (https://drlorenesi.github.io/)",
+  "license": "MIT",
+  "dependencies": {
+    "country-code-emoji": "^2.3.0",
+    "fastest-validator": "^1.12.0"
+  }
+}

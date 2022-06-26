@@ -1,0 +1,9 @@
+name = "cloudflare-worker"
+main = "src/index.js"
+compatibility_date = "2022-06-25"
+
+# Define top-level environment variables
+# under the `[vars]` block using
+# the `key = "value"` format
+[vars]
+API_TOKEN = "example_dev_token"
