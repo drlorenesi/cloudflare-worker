@@ -35,6 +35,21 @@ You can also generate a project from a [template](https://developers.cloudflare.
 npm init cloudflare my-worker https://github.com/cloudflare/worker-template-router
 ```
 
+## Secrets and Environment Variables
+
+In order to not expose sensitive data, we can use `wrangler` [secret](https://developers.cloudflare.com/workers/wrangler/commands/#secret) to enter through the command line so it will not appear anywhere on our repository:
+
+```bash
+# Add a secret
+wrangler secret put CLIENT_TOKEN
+# Delete a secret
+wrangler secret delete <NAME> [OPTIONS]
+# List secrets
+wrangler secret list [OPTIONS]
+```
+
+Note that data can also be set as an [Environment Variable](https://developers.cloudflare.com/workers/platform/environment-variables/)
+
 ## About Cloudflare Workers
 
 In Workers, any incoming HTTP requests are referred to as "fetch" events. A Worker will respond to the HTTP request with the handler method that was assigned to the "fetch" event.
